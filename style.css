@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --gradiant-color1: #2AF598;
+    --gradiant-color2: #009EFD;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+
+/* ! header section start */
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: url(./img/bg-home.png), no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* navbar start */
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+}
+
+.header .navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar .logo img {
+    width: 46px;
+    height: 46px;
+}
+
+
+.header .navbar .logo h3 {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin-left: 5px;
+    font-size: 32px;
+}
+
+
+
+.header .navbar .menu ul {
+    display: flex;
+    gap: 68px;
+}
+
+.header .navbar .menu ul li a {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header .navbar .menu ul li .active {
+    font-weight: 600;
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .navbar .menu ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%);
+    display: block;
+    margin-top: 5px;
+    transition: .5s;
+}
+
+.header .navbar .menu ul li a:hover::after {
+    width: 100%;
+}
+
+.header .navbar .rightSide i {
+    font-size: 30px;
+    color: white;
+    display: none;
+
+}
+
+.rightSide {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+
+.rightSide .shopping-bag {
+    position: relative;
+    display: flex;
+}
+
+
+.rightSide .shopping-bag .count img {
+    position: absolute;
+    left: 17px;
+}
+
+.rightSide .shopping-bag .count span {
+    position: absolute;
+    font-weight: 700;
+    right: 1px;
+}
+
+/* navbar end */
+
+/* text-box */
+
+.text-box {
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.text-box h1 {
+    font-size: 75px;
+    font-weight: 700;
+    width: 1128px;
+}
+
+.text-box p {
+    width: 583px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 20px 0;
+}
+
+.inputBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.text-box .inputBox .input {
+    padding: 24px 30px;
+    border-radius: 50px;
+    width: 463px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.inputBox .input::placeholder {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.inputBox .ellipse {
+    position: absolute;
+    right: 15px;
+}
+
+.inputBox .search {
+    position: absolute;
+    right: 25px;
+}
+
+/* text box end */
+
+/* products image */
+
+.productImg1 {
+    position: absolute;
+    top: 320px;
+    left: 120px;
+}
+
+.productImg2 {
+    position: absolute;
+    bottom: 330px;
+    left: 220px;
+}
+
+.productImg3 {
+    position: absolute;
+    right: 140px;
+    bottom: 326px;
+}
+
+.productInfo {
+    position: absolute;
+    right: 60px;
+    bottom: 396px;
+}
+
+.product-text {
+    color: #fff;
+    position: absolute;
+    right: 90px;
+    bottom: 430px;
+}
+
+.product-text h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.product-text h5 {
+    font-size: 16px;
+}
+
+/* Header end */
+
+
+
+
+
+
+
+@media screen and (max-width: 1096px) {
+
+
+
+    .header .navbar .menu ul {
+        display: none;
+    }
+
+    .header .navbar .rightSide i {
+        display: block;
+    }
+
+    .text-box h1 {
+        font-size: 60px;
+    }
+
+    .text-box p {
+        margin-top: -10px;
+    }
+}
